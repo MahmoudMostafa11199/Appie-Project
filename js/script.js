@@ -67,7 +67,8 @@ allLinks.forEach(function (link) {
     }
 
     // Close mobile naviagtion
-    if (link.classList.contains("main-nav-link"))
+    if (link.classList.contains("main-nav-link") && href !== "#get-start") {
       headerEl.classList.toggle("open-nav");
+    }
   });
 });
