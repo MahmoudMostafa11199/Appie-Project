@@ -50,6 +50,8 @@ const allLinks = document.querySelectorAll("a:link");
 
 allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
+
+    if (link.getAttribute("href").startsWith("#")) {
     e.preventDefault();
     const href = link.getAttribute("href");
 
@@ -70,5 +72,5 @@ allLinks.forEach(function (link) {
     if (link.classList.contains("main-nav-link") && href !== "#get-start") {
       headerEl.classList.toggle("open-nav");
     }
-  });
+  }});
 });
