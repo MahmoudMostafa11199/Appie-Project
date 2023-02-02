@@ -15,10 +15,10 @@
 }
 
 /*------------ NAVIGATION ------------*/
-.header {
+.header-top {
   background-color: #eef1f6;
   height: 9.6rem;
-  padding: 0 6.4rem;
+  padding: 0 4.8rem;
 
   display: flex;
   align-items: center;
@@ -57,9 +57,10 @@
 
 .fill-link:link,
 .fill-link:visited {
+  display: block;
   margin-left: auto;
   background-color: #f23d6d;
-  color: #fff;
+  color: #fff !important;
   padding: 1.4rem 3.2rem;
   border-radius: 30px;
 }
@@ -69,8 +70,24 @@
   background-color: #da3762;
 }
 
+.main-nav-icon {
+  background-color: transparent;
+  border: none;
+  display: none;
+  z-index: 999;
+}
+
+.mobile-nav {
+  color: #0e1133;
+  font-size: 5.2rem;
+  cursor: pointer;
+}
+
+.mobile-nav[name="close-outline"] {
+  display: none;
+}
 /*------------ Sticky Nav ------------*/
-.sticky .header {
+.sticky .header-top {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -91,8 +108,14 @@
   background-color: #eef1f6;
 }
 
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
 .hero-text-box {
   padding: 4.8rem 0 12.8rem 4.8rem;
+  max-width: 100%;
 }
 
 .primary-heading span {
@@ -188,7 +211,7 @@
 .work-description p {
   font-size: 1.4rem;
   font-weight: 500;
-  padding: 1rem 1.8rem;
+  padding: 1.4rem 1.8rem;
   border: 0.2rem solid #eef1f6;
   border-radius: 5rem;
   color: #0e1133;
@@ -271,18 +294,19 @@
   overflow: hidden;
   height: 50rem;
 
+  grid-template-columns: 40fr 60fr;
   gap: 2.4rem;
 }
 
 .marking img {
   width: 100%;
   position: relative;
-  top: 3rem;
+  top: 10rem;
 }
 
 .marking .text {
   padding-top: 9.6rem;
-  padding-right: 8rem;
+  padding-right: 5.6rem;
 }
 
 .marking .text .heading-discription {
@@ -330,16 +354,15 @@
 .features-2-head-box h2 {
   max-width: 40rem;
   color: #fff;
-  margin: 0 auto 1.2rem;
+  margin: 0 auto 1.4rem;
+}
+
+.features-2-section .heading-discription {
+  color: #ddd;
 }
 
 .feature-text-box {
   padding: 4.6rem;
-}
-
-.feature-text span {
-  font-size: 1.2rem;
-  color: #aaa;
 }
 
 .feature-box {
@@ -377,6 +400,12 @@
   box-shadow: 0 0 0rem 0.6rem rgb(51 201 86 / 21%);
 }
 
+.feature-text span {
+  font-size: 1.2rem;
+  color: #aaa;
+  line-height: 1.2;
+}
+
 .feature-app-img img {
   width: 100%;
 }
@@ -387,7 +416,7 @@
 }
 
 .work-2 {
-  padding: 4.8rem 0 9.6rem;
+  padding: 4.8rem 4.8rem 9.6rem;
 
   justify-content: center;
   gap: 6.4rem;
@@ -567,6 +596,10 @@
   width: 50%;
 }
 
+.download-app h2 {
+  margin-bottom: 1.8rem;
+}
+
 .install-app {
   padding-top: 4.8rem;
   display: flex;
@@ -649,10 +682,12 @@
 }
 
 .plan {
+  width: 100%;
   padding: 3.2rem;
   border: 2px solid #eef1f6;
   text-align: start;
   border-radius: 5px;
+  margin: 0 auto;
   transition: all 0.3s;
 }
 
@@ -1009,6 +1044,7 @@
 
 .adress span {
   font-size: 1.4rem;
+  line-height: 1.2;
 }
 
 .footer .download {
@@ -1018,7 +1054,13 @@
   gap: 1.8rem;
 }
 
-.footer .download div {
+.footer .download .play-type {
+  display: flex;
+  gap: 3.6rem;
+}
+
+.footer .download .ios,
+.footer .download .android {
   border: 1px solid #e4e4e5;
   padding: 0.6rem 2.4rem;
   border-radius: 5px;

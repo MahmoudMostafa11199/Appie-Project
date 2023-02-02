@@ -37,9 +37,10 @@
     <!------------ CSS File----------------->
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/quaries.css" />
 
     <!-- JavaScript File -->
-    <script defer src="./script.js"></script>
+    <script defer src="./js/script.js"></script>
 
     <title>Appie</title>
   </head>
@@ -49,7 +50,7 @@
     ></a>
     <!------------ Header ----------------->
 
-    <header id="home" class="header">
+    <header id="home" class="header-top">
       <a href="#"
         ><img src="Images/logo.png" alt="Appie Logo" class="logo"
       /></a>
@@ -79,6 +80,10 @@
         </ul>
       </nav>
       <a href="#get-start" class="main-nav-link fill-link">Get Started</a>
+      <button class="main-nav-icon">
+        <ion-icon name="menu-outline" class="mobile-nav"></ion-icon>
+        <ion-icon name="close-outline" class="mobile-nav"></ion-icon>
+      </button>
     </header>
 
     <!--------------- Hero-section ----------------->
@@ -90,8 +95,9 @@
           </h1>
           <p class="hero-description">Find the best application in the appie</p>
           <form action="" netlify>
-            <ion-icon name="mail-outline"></ion-icon>
+            <label for="email"><ion-icon name="mail-outline"></ion-icon></label>
             <input
+              id="email"
               type="email"
               class="hero-email"
               placeholder="info@appie.com"
@@ -115,11 +121,7 @@
         </div>
 
         <div class="hero-img-box">
-          <img
-            src="Images/hero.png"
-            alt="Hand holding a phone and opening"
-            class="hero-img"
-          />
+          <img src="Images/hero.png" alt="Application phone" class="hero-img" />
         </div>
       </div>
     </section>
@@ -212,7 +214,9 @@
     <section class="marking-section">
       <div class="container">
         <div class="marking grid grid-2-col">
-          <div class="image"><img src="Images/about-thumb.png" alt="" /></div>
+          <div class="image">
+            <img src="Images/about-thumb.png" alt="Marketing img" />
+          </div>
           <div class="text">
             <p class="sub-heading">Marketing</p>
             <h2 class="secondary-heading">
@@ -279,7 +283,7 @@
           </div>
 
           <div class="feature-app-img">
-            <img src="Images/features-thumb-2.png" alt="" />
+            <img src="Images/features-thumb-2.png" alt="Feature img" />
           </div>
         </div>
       </div>
@@ -294,22 +298,25 @@
         </p>
         <div class="work-2 grid grid-4-col">
           <div class="app-details">
-            <img src="Images/icons/counter-icon-1.svg" alt="" />
+            <img src="Images/icons/counter-icon-1.svg" alt="user-icon" />
             <p><strong>45</strong>k+</p>
             <small>Active Installation</small>
           </div>
           <div class="app-details">
-            <img src="Images/icons/counter-icon-2.svg" alt="" />
+            <img src="Images/icons/counter-icon-2.svg" alt="win-icon" />
             <p><strong>108</strong>+</p>
             <small>Active Installation</small>
           </div>
           <div class="app-details">
-            <img src="Images/icons/counter-icon-3.svg" alt="" />
+            <img src="Images/icons/counter-icon-3.svg" alt="emotion-icon" />
             <p><strong>307</strong>+</p>
             <small>Active Installation</small>
           </div>
           <div class="app-details">
-            <img src="Images/icons/counter-icon-4.svg" alt="" />
+            <img
+              src="Images/icons/counter-icon-4.svg"
+              alt="notification-icon"
+            />
             <p><strong>725</strong>k+</p>
             <small>Active Installation</small>
           </div>
@@ -317,7 +324,10 @@
         <div class="vid-learn">
           <div class="vid-box">
             <div class="vid-to-learn">
-              <img src="Images/video-thumb-1.jpg" alt="" />
+              <img
+                src="Images/video-thumb-1.jpg"
+                alt="Video to learn how work with the application"
+              />
               <div class="icon-play-box">
                 <ion-icon
                   class="icon-video icon-play-video"
@@ -344,7 +354,7 @@
             </div>
           </div>
           <div class="img-box">
-            <img src="Images/video-slide-1.jpg" alt="" />
+            <img src="Images/video-slide-1.jpg" alt="Video Slides" />
             <div class="slides">
               <ion-icon class="slide" name="arrow-back-outline"></ion-icon>
               <ion-icon class="slide" name="arrow-forward-outline"></ion-icon>
@@ -485,7 +495,10 @@
       <div class="container">
         <div class="testimonial">
           <div class="testimonial-img-box">
-            <img src="Images/people/customer-4.jpg" alt="" />
+            <img
+              src="Images/people/customer-4.jpg"
+              alt="Customer testimonial"
+            />
             <div class="icons-star">
               <ion-icon name="star"></ion-icon>
               <ion-icon name="star"></ion-icon>
@@ -530,16 +543,16 @@
         </div>
 
         <div class="platform-img-box">
-          <img src="Images/sponsers/sponser-1.png" alt="" />
-          <img src="Images/sponsers/sponser-2.png" alt="" />
-          <img src="Images/sponsers/sponser-3.png" alt="" />
-          <img src="Images/sponsers/sponser-4.png" alt="" />
-          <img src="Images/sponsers/sponser-5.png" alt="" />
-          <img src="Images/sponsers/sponser-6.png" alt="" />
-          <img src="Images/sponsers/sponser-7.png" alt="" />
-          <img src="Images/sponsers/sponser-8.png" alt="" />
-          <img src="Images/sponsers/sponser-9.png" alt="" />
-          <img src="Images/sponsers/sponser-10.png" alt="" />
+          <img src="Images/sponsers/sponser-1.png" alt="platform company" />
+          <img src="Images/sponsers/sponser-2.png" alt="platform brand" />
+          <img src="Images/sponsers/sponser-3.png" alt="platform company" />
+          <img src="Images/sponsers/sponser-4.png" alt="platform javascript" />
+          <img src="Images/sponsers/sponser-5.png" alt="platform company" />
+          <img src="Images/sponsers/sponser-6.png" alt="platform brand name" />
+          <img src="Images/sponsers/sponser-7.png" alt="platform appie" />
+          <img src="Images/sponsers/sponser-8.png" alt="platform vs-code" />
+          <img src="Images/sponsers/sponser-9.png" alt="platform company" />
+          <img src="Images/sponsers/sponser-10.png" alt="platform brand" />
         </div>
       </div>
     </section>
@@ -626,13 +639,15 @@
         </div>
 
         <div class="download">
-          <div class="ios">
-            <ion-icon name="logo-apple"></ion-icon>
-            <small>Download for iOS</small>
-          </div>
-          <div class="android">
-            <ion-icon name="logo-google-playstore"></ion-icon>
-            <small>Download for Android</small>
+          <div class="play-type">
+            <div class="ios">
+              <ion-icon name="logo-apple"></ion-icon>
+              <small>Download for iOS</small>
+            </div>
+            <div class="android">
+              <ion-icon name="logo-google-playstore"></ion-icon>
+              <small>Download for Android</small>
+            </div>
           </div>
           <p class="copyright">
             Copyright © <span class="copyright-year">2021</span> Appie. All

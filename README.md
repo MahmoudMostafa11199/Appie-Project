@@ -1,4 +1,4 @@
 # Appie-Project
-Appie project with HTMLand CSS
+Appie project with HTML and CSS
 
-#### Loading Responsive
+

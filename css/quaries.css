@@ -1,0 +1,422 @@
+/*******************************/
+/*** Below 1344px **************/
+/*** Smaller Desktop  **********/
+/*******************************/
+
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+
+  .vid-to-learn .icon-play-box::before,
+  .vid-to-learn .icon-play-box::after {
+    display: none;
+  }
+
+  .icon-play-video {
+    box-shadow: 0 0 0rem 0.4rem rgba(252, 252, 252, 0.21);
+  }
+}
+
+/*******************************/
+/*** Below 1200px **************/
+/*** Landscape Tablet  *********/
+/*******************************/
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/*******************************/
+/*** Below 976px ***************/
+/*** Tablet  *******************/
+/*******************************/
+
+@media (max-width: 61em) {
+  html {
+    font-size: 50%;
+  }
+
+  .primary-heading {
+    font-size: 5.2rem;
+  }
+
+  .secondary-heading {
+    font-size: 3.6rem;
+  }
+
+  .third-heading {
+    font-size: 2.4rem;
+  }
+
+  .header-top {
+    gap: 0;
+    position: relative;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 2.4rem;
+    color: #0e1133;
+  }
+
+  .main-nav {
+    background-color: #eef1f6;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4.8rem;
+    list-style: none;
+  }
+
+  .open-nav .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .open-nav .mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .open-nav .mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .main-nav-link:hover,
+  .main-nav-link:active {
+    color: #f23d6d;
+  }
+
+  .fill-link:link,
+  .fill-link:visited {
+    font-size: 1.4rem;
+    padding: 1.4rem 2.4rem;
+  }
+
+  .main-nav-icon {
+    display: block;
+    margin-left: 1.8rem;
+  }
+
+  .hero-section {
+    padding-top: 3.2rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+
+  .hero-text-box {
+    padding: 0 8rem;
+    position: relative;
+    bottom: -2.5rem;
+  }
+
+  .hero-description {
+    margin-bottom: 4.8rem;
+  }
+
+  .hero-text-box form {
+    max-width: 70%;
+    margin-bottom: 4.8rem;
+  }
+
+  .hero-img {
+    display: block;
+    width: 50%;
+    height: 100%;
+    margin-left: auto;
+  }
+
+  .work {
+    padding: 2.4rem;
+  }
+
+  .feature-text-box {
+    padding: 4.6rem 0;
+  }
+
+  .feature-box {
+    width: 100%;
+    padding: 2.4rem;
+  }
+
+  .feature-text span {
+    font-size: 1rem;
+  }
+
+  .work-2 {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0;
+  }
+
+  .work-2 .app-details {
+    justify-self: center;
+  }
+
+  .vid-text {
+    padding: 0 0 0 5.6rem;
+  }
+
+  .plan {
+    padding: 2.4rem;
+  }
+
+  .testimonial {
+    padding: 6.4rem 8rem;
+  }
+}
+
+/*******************************/
+/*** Below 736px ***************/
+/*** Smaller Tablet  ***********/
+/*******************************/
+
+@media (max-width: 46em) {
+  .work-section {
+    padding: 8rem 0;
+  }
+
+  .works {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .work-description {
+    flex-direction: column;
+    gap: 2.4rem;
+    align-items: flex-start;
+  }
+
+  .work-description p {
+    align-self: flex-end;
+  }
+
+  .marking {
+    grid-template-columns: 1fr;
+  }
+
+  .marking .image {
+    display: none;
+  }
+
+  .marking .text {
+    padding: 2.4rem 4.8rem;
+    text-align: center;
+  }
+
+  .marking .text .heading-discription {
+    margin-bottom: 5.6rem;
+  }
+
+  .marking .text div:nth-child(4) {
+    text-align: start;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .features-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-app-img img {
+    width: 80%;
+  }
+
+  .feature-box {
+    padding: 3.2rem;
+  }
+
+  .work-2-section {
+    padding: 6.4rem 0;
+  }
+
+  .vid-learn {
+    flex-direction: column;
+    gap: 5.6rem;
+  }
+
+  .vid-text {
+    padding: 0 1.4rem;
+  }
+
+  .img-box {
+    text-align: center;
+  }
+
+  .img-box img {
+    width: 80%;
+  }
+
+  .img-box .slides {
+    display: none;
+  }
+
+  .download-app {
+    width: 100%;
+  }
+
+  .download-app h2 {
+    width: 65%;
+    margin-bottom: 1.8rem;
+  }
+
+  .pricing-section {
+    padding: 6.4rem 0;
+  }
+
+  .pricing {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 5.6rem;
+  }
+
+  .price-juicy {
+    grid-column: span 2;
+    margin: 0 auto;
+  }
+
+  .plan {
+    max-width: 31.5rem;
+  }
+
+  .testimonial {
+    background-image: none;
+    background-color: #2c70f5 !important;
+    text-align: center;
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .testimonial .btn {
+    display: none;
+  }
+
+  .platform-head-box {
+    width: 90%;
+  }
+
+  .contact {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 5.6rem;
+    column-gap: 4.8rem;
+  }
+
+  .company-col {
+    justify-self: start;
+  }
+
+  .footer .download {
+    flex-direction: column;
+    row-gap: 2.4rem;
+  }
+
+  .copyright {
+    margin: 0;
+  }
+}
+
+/*******************************/
+/*** Below 560px ***************/
+/*** Phones  *******************/
+/*******************************/
+
+@media (max-width: 35em) {
+  .header-top {
+    padding: 0 2.4rem;
+  }
+
+  .hero-text-box {
+    padding: 0 2.4rem;
+    bottom: 0;
+  }
+
+  .container {
+    padding: 0 3.2rem 0;
+  }
+
+  .primary-heading {
+    font-size: 4.4rem;
+  }
+
+  .secondary-heading {
+    font-size: 3rem;
+  }
+
+  .third-heading {
+    font-size: 2rem;
+  }
+
+  .hero-text-box form {
+    max-width: 100%;
+  }
+
+  .work-section {
+    text-align: center;
+  }
+
+  .work-description p {
+    align-self: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .icon-work-box {
+    margin: 0 auto 3.2rem;
+  }
+
+  .app-details {
+    width: 100%;
+  }
+
+  .plan {
+    max-width: 90%;
+    grid-column: 1;
+  }
+
+  .price-sweet {
+    grid-row: 2;
+  }
+
+  .testimonial {
+    padding: 4.8rem;
+  }
+
+  .platform-img-box {
+    width: 100%;
+  }
+
+  .contact,
+  .logo-col,
+  .footer-list {
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
+  .company-col {
+    justify-self: auto;
+  }
+}
