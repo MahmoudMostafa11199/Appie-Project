@@ -1,4 +1,4 @@
-.btn-home-up {
+.btn-move-up {
   width: 1.8rem;
   height: 1.8rem;
   padding: 1rem;
@@ -8,9 +8,21 @@
   bottom: 25px;
   right: 25px;
   cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.4s ease-in;
+  transform: translateY(100%);
 }
 
-.btn-home-up:hover {
+.open-btn-move-up .btn-move-up {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.btn-move-up:hover {
   background-color: #da3762;
 }
 
@@ -26,7 +38,7 @@
 }
 
 .logo {
-  height: 2.4rem;
+  height: 3rem;
 }
 
 .main-nav-list {
@@ -95,6 +107,9 @@
   height: 7.5rem;
   padding-top: 0;
   padding-bottom: 0;
+  background-color: #eef1f6ed;
+  box-shadow: 0 0.6rem 0.6rem rgb(0 0 0 / 12%);
+
   z-index: 999;
 }
 
@@ -106,11 +121,13 @@
 .hero-section {
   padding-top: 9.6rem;
   background-color: #eef1f6;
+  min-height: calc(100vh - 9.6rem);
 }
 
 .hero {
   max-width: 130rem;
   margin: 0 auto;
+  margin-right: 0;
 }
 
 .hero-text-box {
@@ -235,6 +252,7 @@
 .work {
   padding: 4.8rem;
   border: 0.2rem solid #eef1f6;
+  border-radius: 1.4rem;
 }
 
 .icon-work-box {
@@ -368,11 +386,29 @@
 .feature-box {
   padding: 3.2rem;
   border: 1px solid #eef1f617;
+  border-radius: 1.2rem;
   text-align: start;
-  margin-bottom: 1.8rem;
+  margin-bottom: 2.4rem;
+  transition: all 0.3s;
 
   display: flex;
   gap: 2.4rem;
+}
+
+.feature-box:hover {
+  transform: translateY(-1rem);
+}
+
+.feature-box:nth-child(1):hover {
+  border-top: 4px solid #ff3e66;
+}
+
+.feature-box:nth-child(2):hover {
+  border-top: 4px solid #2eacfc;
+}
+
+.feature-box:nth-child(3):hover {
+  border-top: 4px solid #33c956;
 }
 
 .feature-box h4 {
@@ -426,6 +462,7 @@
   width: 20rem;
   padding: 2rem 3.2rem;
   border: 1px solid #eef1f6;
+  border-radius: 1rem;
   box-shadow: 0 3.6rem 3.6rem rgb(0 0 0 / 10%);
 
   display: flex;
@@ -615,28 +652,34 @@
   align-items: center;
   gap: 0.4rem;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .install-app small {
   font-size: 1.4rem;
   color: #0e1133;
+  transition: all 0.3s;
 }
 
-.install-app .ios {
+.install-app .ios,
+.install-app div:hover {
   background-color: #0e1133 !important;
 }
 
 .install-app ion-icon {
   font-size: 3.6rem;
-}
-
-.install-app ion-icon[name="logo-apple"],
-.install-app .ios small {
-  color: #fff;
+  transition: all 0.3s;
 }
 
 .install-app ion-icon[name="logo-google-playstore"] {
   color: #0e1133;
+}
+
+.install-app ion-icon[name="logo-apple"],
+.install-app .ios small,
+.install-app .android:hover ion-icon[name="logo-google-playstore"],
+.install-app .android:hover small {
+  color: #fff;
 }
 
 .install-app strong {
@@ -669,6 +712,7 @@
   padding: 0.8rem 1.6rem;
   border-radius: 2rem;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .price-duration .month,
@@ -683,6 +727,7 @@
 
 .plan {
   width: 100%;
+  height: max-content;
   padding: 3.2rem;
   border: 2px solid #eef1f6;
   text-align: start;
@@ -911,11 +956,25 @@
   margin: 0 auto;
 }
 
-.platform-img-box img {
+.platform-img-box .sponer-box {
   padding: 3.4rem;
+  border-radius: 1rem;
+  box-shadow: 0 3.6rem 3.6rem rgb(0 0 0 / 12%);
   width: 10rem;
   height: 10rem;
-  box-shadow: 0 3.6rem 3.6rem rgb(0 0 0 / 12%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.platform-img-box img {
+  transition: all 0.3s;
+}
+
+.platform-img-box .sponer-box:hover img {
+  transform: scale(1.2);
 }
 
 /*------------ Footer Section ------------*/
@@ -938,7 +997,7 @@
 }
 
 .logo-col img {
-  height: 2.4rem;
+  height: 3rem;
 }
 
 .logo-col p {
@@ -1070,7 +1129,7 @@
   gap: 0.4rem;
   cursor: pointer;
   color: #0e1133;
-  transition: all 0.1s;
+  transition: all 0.3s;
 }
 
 .footer .download .ios {
@@ -1086,6 +1145,7 @@
   font-size: 1.2rem;
   font-weight: 500;
   color: #0e1133;
+  transition: all 0.3s;
 }
 
 .footer .ios:hover,

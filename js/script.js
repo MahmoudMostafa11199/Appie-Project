@@ -50,27 +50,52 @@ const allLinks = document.querySelectorAll("a:link");
 
 allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
-
     if (link.getAttribute("href").startsWith("#")) {
-    e.preventDefault();
-    const href = link.getAttribute("href");
+      e.preventDefault();
+      const href = link.getAttribute("href");
 
-    // Scroll back to top
-    if (href === "#")
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+      // Scroll back to top
+      if (href === "#")
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
 
-    // Scroll to other links
-    if (href !== "#" && href.startsWith("#")) {
-      const sectionEl = document.querySelector(href);
-      sectionEl.scrollIntoView({ behavior: "smooth" });
+      // Scroll to other links
+      if (href !== "#" && href.startsWith("#")) {
+        const sectionEl = document.querySelector(href);
+        sectionEl.scrollIntoView({ behavior: "smooth" });
+      }
+
+      // Close mobile naviagtion
+      if (link.classList.contains("main-nav-link") && href !== "#get-start") {
+        headerEl.classList.toggle("open-nav");
+      }
     }
-
-    // Close mobile naviagtion
-    if (link.classList.contains("main-nav-link") && href !== "#get-start") {
-      headerEl.classList.toggle("open-nav");
-    }
-  }});
+  });
 });
+
+///////////////////////////////////////////////////////////
+// Btn Move UP
+const workSectionEl = document.querySelector(".hero-section");
+
+const obs2 = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+
+    if (!ent.isIntersecting) {
+      document.body.classList.add("open-btn-move-up");
+    }
+
+    if (ent.isIntersecting) {
+      document.body.classList.remove("open-btn-move-up");
+    }
+  },
+  {
+    root: null,
+    threshold: 1,
+    rootMargin: "150px",
+  }
+);
+
+obs2.observe(workSectionEl);

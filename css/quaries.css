@@ -6,7 +6,7 @@
 @media (max-width: 84em) {
   .hero {
     max-width: 120rem;
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
 
   .vid-to-learn .icon-play-box::before,
@@ -67,7 +67,7 @@
     background-color: #eef1f6;
     width: 30vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     transition: all 0.4s ease-in;
@@ -121,7 +121,7 @@
   }
 
   .hero-section {
-    padding-top: 3.2rem;
+    padding-top: 9.6rem;
   }
 
   .hero {
@@ -402,7 +402,7 @@
   }
 
   .price-sweet {
-    grid-row: 2;
+    grid-row: 1;
   }
 
   .testimonial {
