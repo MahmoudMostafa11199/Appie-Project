@@ -380,6 +380,10 @@
     text-align: center;
   }
 
+  .work-description {
+    align-items: center;
+  }
+
   .work-description p {
     align-self: center;
   }
